@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class TargetDodgy : MonoBehaviour
 {
-    [SerializeField] Transform player;
     [SerializeField] float moveSpeed;
     Vector3 playerPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerPosition = player.transform.position;
     }
 

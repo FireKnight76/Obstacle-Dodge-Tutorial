@@ -5,13 +5,17 @@ using Random = UnityEngine.Random;
 public class TriggerProjectile : MonoBehaviour
 {
     [SerializeField] GameObject projectileObject;
-    [SerializeField] Transform player;
     Vector3 playerPosition;
-    
+
+    private void Awake()
+    {
+    }
 
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
         int summonCount = Random.Range(0, 6);
 
         playerPosition = player.transform.position;

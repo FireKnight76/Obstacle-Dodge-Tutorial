@@ -29,7 +29,7 @@ public class TriggerProjectile : MonoBehaviour
                     new Vector3(
                         Random.Range(playerPosition.x - 5, playerPosition.x + 5),
                         8f, 
-                        Random.Range(playerPosition.z - 5, playerPosition.z + 5))
+                        Random.Range(playerPosition.z, playerPosition.z + 8))
                     , Quaternion.identity);
             }
         }

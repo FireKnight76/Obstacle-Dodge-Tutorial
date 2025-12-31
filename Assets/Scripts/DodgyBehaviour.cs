@@ -21,6 +21,6 @@ public class DodgyBehaviour : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * dodgySpeed;
         float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * dodgySpeed;
 
-        transform.Translate(moveX, 0, moveZ);
+        transform.Translate(moveX, 0, moveZ, Space.World);
     }
 }

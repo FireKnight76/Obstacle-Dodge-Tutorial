@@ -17,7 +17,15 @@ public class TargetDodgy : MonoBehaviour
     void Update()
     {
         MoveToPlayer();
+        DestroyProjectile();
+    }
 
+    void DestroyProjectile()
+    {
+        if (transform.position == playerPosition)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void MoveToPlayer()
